@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Filmes Cadastrados</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        <h1>Filmes Cadastrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Sinopse</th>
+                    <th>Gênero</th>
+                    <th>Ano de Lançamento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="filme : ${filmes}">
+                    <td th:text="${filme.titulo}">Título</td>
+                    <td th:text="${filme.sinopse}">Sinopse</td>
+                    <td th:text="${filme.genero}">Gênero</td>
+                    <td th:text="${filme.anoLancamento}">Ano</td>
+                    <td><a th:href="@{/filmes/{id}(id=${filme.id})}">Detalhes</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/filmes/cadastro">Cadastrar Novo Filme</a>
+    </body>
+</html>

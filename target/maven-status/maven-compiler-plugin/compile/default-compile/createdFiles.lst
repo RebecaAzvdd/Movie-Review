@@ -1,0 +1,6 @@
+com/example/movie/review/config/SwaggerConfig.class
+com/example/movie/review/controller/FilmeController.class
+com/example/movie/review/model/Analise.class
+com/example/movie/review/MovieReviewApplication.class
+com/example/movie/review/model/Filme.class
+com/example/movie/review/controller/HomeController.class
